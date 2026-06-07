@@ -205,7 +205,7 @@ const SnakeGame = forwardRef<SnakeGameHandle, SnakeGameProps>(
       }
 
       setSnake(newSnake);
-    }, [gridConfig, placeFood, animateFlash, highScore, setHighScore]);
+    }, [gridConfig, placeFood, animateFlash, highScore, setHighScore, playEatFood]);
 
     const restart = useCallback(() => {
       initGame();
@@ -247,7 +247,7 @@ const SnakeGame = forwardRef<SnakeGameHandle, SnakeGameProps>(
       if (dims.w && dims.h && snake.length === 0) {
         initGame();
       }
-    }, [dims.w, dims.h]);
+    }, [dims.w, dims.h, snake.length, initGame]);
 
     
     useEffect(() => {

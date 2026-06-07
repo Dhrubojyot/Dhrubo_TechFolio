@@ -332,7 +332,7 @@ const Journey = () => {
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           <AnimatePresence mode="wait">
-            {items.map((item, index) => (
+            {items.map((item) => (
               <motion.div
                 key={`${activeTab}-${item.id}`}
                 variants={cardVariants}

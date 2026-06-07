@@ -4,18 +4,11 @@ import Profile from "@/components/profile";
 import { Button } from "@/components/ui/button";
 import { NumberTicker } from "@/components/ui/number-ticker";
 import { Typewriter } from "@/components/ui/typewriter";
-import { clientApi } from "@/lib/client-api";
 import { cn } from "@/lib/utils";
-import { useQuery } from "@tanstack/react-query";
-import { ArrowDownSquareIcon, ArrowUpRight, Download } from "lucide-react";
+import { ArrowDownSquareIcon, ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
-import Link from "next/link";
 
 const Hero = () => {
-  const { data: umamiStats } = useQuery({
-    queryKey: ["pageViews"],
-    queryFn: clientApi.views.getStats,
-  });
 
   return (
     <div className="relative flex flex-col justify-center overflow-hidden border-b pt-12">

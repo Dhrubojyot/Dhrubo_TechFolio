@@ -2,7 +2,7 @@
 
 import { motion, type Variants, useAnimationControls } from "motion/react";
 import { cn } from "@/lib/utils";
-import { useMemo, useRef, useState, useCallback, useEffect } from "react";
+import { useMemo, useState, useCallback, useEffect } from "react";
 import Link from "next/link";
 
 interface SVGPathData {
@@ -28,7 +28,6 @@ export function Animation({
   animationTime = 3,
   hover = false,
   onAnimationEnd,
-  loop = false, // Changed to false by default - no looping
   paths,
   initialAnimation = true,
   viewBox = "0 0 81 24",
@@ -40,11 +39,7 @@ export function Animation({
   const total = paths?.length ?? 0;
   const perPath = total > 0 ? Math.max(0, animationTime) / total : 0;
 
-  const totalLoops = useMemo(() => {
-    if (loop === true) return Infinity;
-    if (typeof loop === "number") return Math.max(1, Math.floor(loop));
-    return 1; // Default: play once
-  }, [loop]);
+
 
   const pathVariants: Variants = useMemo(
     () => ({
