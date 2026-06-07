@@ -58,7 +58,7 @@ const env = createEnv({
   },
 
   emptyStringAsUndefined: true,
-
+  skipValidation: true,
 });
 
 export default env;

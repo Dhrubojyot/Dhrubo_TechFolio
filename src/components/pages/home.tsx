@@ -173,7 +173,7 @@ const MainScreen: React.FC<{
           <>
             Hi! , I am{" "}
             <Typewriter
-              text={["a developer", "Siddharth", "Stark"]}
+              text={["a developer", "Dhrubojyoti"]}
               speed={70}
               waitTime={1500}
               deleteSpeed={40}

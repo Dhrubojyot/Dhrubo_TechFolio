@@ -25,13 +25,13 @@ const About = () => {
           <HeadingLine className="mt-6" lineWidth={40} />
 
           <Robot className="absolute top-6 -right-8 z-5 w-64 font-mono text-white max-md:scale-x-[-1] md:top-8 md:right-4">
-            <div className="max-md:scale-x-[-1]">Hey👋</div>
+            <div className="max-md:scale-x-[-1]">Hey!👋</div>
           </Robot>
 
           <div className="text-foreground/70 bg-muted/20 relative z-10 mx-auto mt-6 max-w-3xl rounded-lg border-2 border-dotted text-sm leading-relaxed backdrop-blur-3xl md:text-base">
             <div className="p-6">
               <p className="">
-                I build fast, friendly products that make users smile
+                I turn concepts into fast, modern, and user-focused digital experiences. From full-stack web apps to cloud-powered solutions, I love building products that feel smooth, useful, and impactful
                 <span className="mx-1 inline-block align-middle">
                   <span className="ring-offset-background relative inline-block w-12 rotate-6 overflow-hidden rounded-md ring ring-offset-2">
                     <img
@@ -41,12 +41,12 @@ const About = () => {
                     />
                   </span>
                 </span>
-                —and sometimes their dogs too.
+
               </p>
 
               <p className="">
-                Stack: Next.js, React, TypeScript, Tailwind. Clean APIs, tiny
-                micro‑interactions, big delight
+                Stack: Next.js, React, TypeScript, Tailwind. Cloud & DevOps
+
                 <span className="mx-1 inline-block align-middle">
                   <span className="ring-offset-background relative inline-block w-12 -rotate-3 overflow-hidden rounded-md ring ring-offset-2">
                     <img
@@ -60,7 +60,7 @@ const About = () => {
               </p>
 
               <p className="">
-                Off‑duty: coffee, sketching animations, and One Piece marathons
+                Beyond coding, I’m the Convenor of InnovateX Engineers Community, a global tech community of 700+ students, where I help foster collaboration, innovation, and learning among aspiring developers and tech enthusiasts
                 <span className="mx-1 inline-block align-middle">
                   <span className="ring-offset-background relative inline-block w-12 rotate-3 overflow-hidden rounded-md ring ring-offset-2">
                     <img
@@ -73,9 +73,8 @@ const About = () => {
                 .
               </p>
 
-              <p className="">
-                Best in small teams: quick loops, clear comms, high‑fives after
-                deploy
+              {/* <p className="">
+                and i am passionate about hackathons, innovation, teamwork, and constantly learning new technologies.
                 <span className="mx-1 inline-block align-middle">
                   <span className="ring-offset-background relative inline-block w-12 -rotate-2 overflow-hidden rounded-md ring ring-offset-2">
                     <img
@@ -88,10 +87,10 @@ const About = () => {
                   </span>
                 </span>
                 .
-              </p>
+              </p> */}
 
               <p>
-                Got a messy brief or a half‑baked idea?
+                Got an idea or a project in mind?
                 <span className="mx-1 inline-block align-middle">
                   <span className="ring-offset-background relative inline-block w-12 rotate-2 overflow-hidden rounded-md ring ring-offset-2">
                     <img
@@ -101,7 +100,7 @@ const About = () => {
                     />
                   </span>
                 </span>
-                Let’s turn it into something real.
+                Let’s build something meaningful together.
               </p>
             </div>
 
@@ -141,19 +140,19 @@ const About = () => {
               {/* Main card */}
               <div className="bg-background relative rounded-2xl border-2 p-6 shadow-xl">
                 <div className="text-center">
-                  <div className="border-foreground/20 bg-muted/20 mb-4 overflow-hidden rounded-lg border-2 border-dashed p-4">
+                  <div className="border-foreground/20 bg-muted/20 mb-4 overflow-hidden rounded-lg border-2 border-dashed border-primary">
                     <img
-                      src="/ascii-art-profile.png"
+                      src="/panjabi.webp"
                       alt="ASCII"
-                      className="-mb-5 h-auto w-full object-cover object-center dark:invert"
+                      className="-mb-5 h-auto w-full object-cover object-center "
                     />
                   </div>
                   <h3 className="font-incognito text-2xl font-semibold">
-                    Siddharth
+                    Dhrubojyoti Chakraborty
                   </h3>
-                  <p className="text-foreground/60 mt-1 font-mono text-sm">
-                    @stark
-                  </p>
+                  {/* <p className="text-foreground/60 mt-1 font-mono text-sm">
+                    @Convenor, InnovateX Community
+                  </p> */}
 
                   {/* Status badges */}
                   <div className="mt-4 flex flex-wrap justify-center gap-2">

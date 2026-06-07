@@ -50,15 +50,15 @@ const Hero = () => {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="mb-4 inline-flex items-center gap-2"
+              className="mb-4 inline-flex flex-row items-center gap-2 flex-nowrap"
             >
-              <div className="bg-background border px-3 py-1">
-                <span className="text-foreground/60 font-mono text-xs">
+              <div className="bg-background border px-3 py-1 shrink-0">
+                <span className="text-foreground/60 font-mono text-xs whitespace-nowrap">
                   {"<"} Hello World {"/>"}
                 </span>
               </div>
-              <div className="h-px w-12 bg-[#e1e1e1]" />
-              <span className="text-foreground/50 font-mono text-xs md:text-sm">
+              <div className="h-px w-6 bg-[#e1e1e1] shrink-0 sm:w-12" />
+              <span className="text-foreground/50 font-mono text-xs md:text-sm whitespace-nowrap shrink-0">
                 Full-Stack Developer
               </span>
             </motion.div>
@@ -73,7 +73,7 @@ const Hero = () => {
               <span className="text-foreground">Hey, I&apos;m </span>
               <span className="relative text-[#8cc2ff] italic">
                 <Typewriter
-                  text={["Siddharth", "Stark"]}
+                  text={["Dhrubojyoti Chakraborty"]}
                   speed={85}
                   waitTime={1500}
                   deleteSpeed={40}
@@ -89,8 +89,8 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-foreground/60 max-w-2xl text-sm font-light md:text-base"
             >
-              Fullstack developer with a passion for building web applications.
-              I specialize in React, Next.js, Node.js, and TypeScript.
+              A Fullstack developer with a passion for building creative web applications.
+              I specialize in React, Next.js, TypeScript, Cloud, IOT, AI/Ml, and Agentic Automation.
             </motion.p>
 
             <motion.div
@@ -104,12 +104,12 @@ const Hero = () => {
                 size="lg"
                 className="group/btn border-2 font-medium"
               >
-                <a href={"#contact"}>
+                <a href={"https://www.linkedin.com/in/dhrubojyoti-chakraborty-567857257/"}>
                   Lets Connect
                   <ArrowUpRight className="ml-1 h-3 w-3 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
                 </a>
               </Button>
-              <Button
+              {/* <Button
                 asChild
                 variant="outline"
                 size="lg"
@@ -119,7 +119,7 @@ const Hero = () => {
                   <Download className="size-4 transition-transform group-hover/btn:translate-y-0.5" />
                   Download resume
                 </Link>
-              </Button>
+              </Button> */}
             </motion.div>
           </div>
         </motion.div>
@@ -130,14 +130,14 @@ const Hero = () => {
         <div className="grid grid-cols-2 border md:max-w-3/4 md:border-0 md:border-t md:border-r lg:grid-cols-4">
           {[
             {
-              label: "Portfolio views",
-              value: umamiStats?.data?.pageviews ?? 0,
+              label: "Linkedin Connections", value: 6700,
             },
-            { label: "Years of Experience", value: 2 },
-            { label: "Projects Shipped", value: 8 },
-            { label: "Happy Clients", value: 5 },
+            { label: "Years of Experience", value: 4 },
+            { label: "Projects & Contributions", value: 30 },
+            { label: "Leadership & Mentorship Roles", value: 10 },
           ].map((stat, i) => (
             <div
+
               key={i}
               className={cn(
                 "group hover:bg-foreground/5 relative p-8 text-center transition-colors",

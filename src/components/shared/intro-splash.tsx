@@ -14,12 +14,12 @@ export const IntroSplash = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
     >
-   
+
       <BackgroundAnimation
         color={resolvedTheme === "light" ? "blue" : "ember"}
       />
 
-    
+
       <motion.div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white"
         initial={{ opacity: 0, y: 24, scale: 0.98 }}
