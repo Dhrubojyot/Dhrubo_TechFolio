@@ -11,7 +11,7 @@ const baseUrl = env.BETTER_AUTH_URL
 
 export const auth = betterAuth({
     baseURL: baseUrl,
-    secret: process.env.BETTER_AUTH_SECRET!, // generate with CLI: npx @better-auth/cli secret
+    secret: process.env.BETTER_AUTH_SECRET || "mock-better-auth-secret-for-build-time-fallback",
     trustedOrigins: ["http://localhost:3000", baseUrl],
 
     database: prismaAdapter(prisma, {
@@ -29,12 +29,12 @@ export const auth = betterAuth({
 
     socialProviders: {
         github: {
-            clientId: env.GITHUB_CLIENT_ID,
-            clientSecret: env.GITHUB_CLIENT_SECRET,
+            clientId: env.GITHUB_CLIENT_ID || "mock-github-client-id",
+            clientSecret: env.GITHUB_CLIENT_SECRET || "mock-github-client-secret",
         },
         google: {
-            clientId: env.GOOGLE_CLIENT_ID,
-            clientSecret: env.GOOGLE_CLIENT_SECRET,
+            clientId: env.GOOGLE_CLIENT_ID || "mock-google-client-id",
+            clientSecret: env.GOOGLE_CLIENT_SECRET || "mock-google-client-secret",
         }
     },
 
