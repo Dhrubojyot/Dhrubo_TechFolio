@@ -39,10 +39,11 @@ interface ContainerScrollContextValue {
 }
 
 interface ProcessCardProps
-  extends HTMLMotionProps<"div">,
+  extends Omit<HTMLMotionProps<"div">, "children">,
     VariantProps<typeof processCardVariants> {
   itemsLength: number;
   index: number;
+  children?: React.ReactNode;
 }
 
 const ContainerScrollContext = React.createContext<
