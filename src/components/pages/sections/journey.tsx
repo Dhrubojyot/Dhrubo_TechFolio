@@ -78,8 +78,8 @@ const experience = [
   },
   {
     id: "exp-2",
-    title: "Technical Associate",
-    subtitle: "IEI Student Chapter CSE, AOT",
+    title: "IEI Student Chapter CSE, AOT",
+    subtitle: "Technical Associate",
     location: "AOT",
     duration: "2025 – Present",
     status: "ongoing" as const,
@@ -92,6 +92,34 @@ const experience = [
   },
   {
     id: "exp-3",
+    title: "Miro",
+    subtitle: "Meet-ups Ambassador",
+    location: "Remote",
+    duration: "2026 – Present",
+    status: "ongoing" as const,
+    description:
+      "As a Miro Meetup Ambassador, I represent the Miro Community across the globe, leading initiatives that foster collaboration, innovation, and arrange events for the community.",
+
+    tags: ["Miro Community", "Ambassador"],
+    logo: "/miro.webp",
+    logoFallback: "Miro",
+  },
+  {
+    id: "exp-4",
+    title: "Mentor, Open-Source Contributor",
+    subtitle: "10x Hackathon / 5x Hackathon Mentor. @SSOC, @GSSOC @Apertre3.0",
+    location: "Remote",
+    duration: "2023 – Present",
+    status: "ongoing" as const,
+    description:
+      "Contributing to open-source repositories, raising pull requests, and collaborating with global developers on meaningful projects.",
+
+    tags: ["Open Source", "Mentorship"],
+    logo: "/company/github-logo.png",
+    logoFallback: "GH",
+  },
+  {
+    id: "exp-5",
     title: "ISRO AI/ML Certified Trainee",
     subtitle: "AI/ML for Geodata Analysis",
     location: "Remote",
@@ -106,7 +134,7 @@ const experience = [
   },
 
   {
-    id: "exp-4",
+    id: "exp-6",
     title: "Google Cloud Arcade Facilitator 2023, 2024, 2025",
     subtitle: "Google Cloud",
     location: "Remote",
@@ -117,21 +145,6 @@ const experience = [
 
     tags: ["Google Cloud", "Facilitator"],
     logo: "/gc.png",
-    logoFallback: "GH",
-  },
-
-  {
-    id: "exp-5",
-    title: "Mentor, Open-Source Contributor",
-    subtitle: "10x Hackathon / 5x Hackathon Mentor. @SSOC, @GSSOC @Apertre3.0",
-    location: "Remote",
-    duration: "2023 – Present",
-    status: "ongoing" as const,
-    description:
-      "Contributing to open-source repositories, raising pull requests, and collaborating with global developers on meaningful projects.",
-
-    tags: ["Open Source", "Mentorship"],
-    logo: "/company/github-logo.png",
     logoFallback: "GH",
   },
 
