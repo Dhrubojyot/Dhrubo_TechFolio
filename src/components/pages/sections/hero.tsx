@@ -108,7 +108,7 @@ const Hero = () => {
                 size="lg"
                 className="group/btn border-2 font-medium"
               >
-                <Link href={"/resume.pdf"}>
+                <Link href={"/Dhrubojyoti Resume.pdf"}>
                   <Download className="size-4 transition-transform group-hover/btn:translate-y-0.5" />
                   Download resume
                 </Link>

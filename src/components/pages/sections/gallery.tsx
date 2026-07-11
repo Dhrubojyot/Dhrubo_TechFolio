@@ -15,14 +15,14 @@ export default function Gallery() {
       <div className="relative overflow-hidden">
         <BackgroundGridAnimated />
 
-        <div className="relative z-10 px-4 pt-16 pb-10 md:px-8">
+        <div className="relative z-10 px-4 pt-4 pb-6 md:pt-16 md:pb-10 md:px-8">
           {/* Section intro */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-10 text-center"
+            className="mb-6 md:mb-10 text-center"
           >
             <p className="text-muted-foreground max-w-xl mx-auto text-sm font-light leading-relaxed">
               A visual orbit of the best moments from my journey  — hover each card to explore the milestones that shaped my career.
@@ -46,7 +46,7 @@ export default function Gallery() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-20 md:mt-10 flex items-center justify-center gap-4"
+            className="mt-8 md:mt-10 flex items-center justify-center gap-4"
           >
             {/* Hide lines on mobile, show on desktop */}
             <div className="hidden md:block h-px flex-1 max-w-24 bg-border" />

@@ -35,9 +35,9 @@ const About = () => {
                 <span className="mx-1 inline-block align-middle">
                   <span className="ring-offset-background relative inline-block w-12 rotate-6 overflow-hidden rounded-md ring ring-offset-2">
                     <img
-                      src={"/gifs/kawaii%20cat%20GIF.gif"}
+                      src={"/gifs/iron%20man%20.gif"}
                       className="h-auto w-full object-cover object-center"
-                      alt="kawaii cat cheering"
+                      alt="iron man"
                     />
                   </span>
                 </span>

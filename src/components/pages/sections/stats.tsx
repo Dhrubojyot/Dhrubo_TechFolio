@@ -578,10 +578,10 @@ const InsightsContent = ({ data }: { data?: GitHubStatsResponse }) => {
 
   const prClosedPercentage = data?.pullRequests.total
     ? Math.round(
-        ((data.pullRequests.closed + data.pullRequests.merged) /
-          data.pullRequests.total) *
-          100,
-      )
+      ((data.pullRequests.closed + data.pullRequests.merged) /
+        data.pullRequests.total) *
+      100,
+    )
     : 0;
 
   const issuesClosedPercentage = data?.issues.total
@@ -645,7 +645,7 @@ const InsightsContent = ({ data }: { data?: GitHubStatsResponse }) => {
 
       {/* Metrics Grid */}
       <div className="grid gap-4 md:grid-cols-2">
-        
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

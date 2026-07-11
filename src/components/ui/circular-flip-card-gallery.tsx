@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
+import { Marquee } from "@/components/ui/marquee";
 
 // --- Card Data ---
 const cardData = [
@@ -100,17 +101,35 @@ interface FlipCardProps {
 }
 
 function FlipCard({ image, title, className, style }: FlipCardProps) {
+  const [isFlipped, setIsFlipped] = useState(false);
+
   return (
     <div
       className={cn(
-        "group w-24 h-32 md:w-28 md:h-36 rounded-xl [perspective:1000px] transition-transform duration-300 ease-in-out hover:scale-110",
+        "group w-24 h-32 md:w-28 md:h-36 rounded-xl [perspective:1000px] transition-transform duration-300 ease-in-out hover:scale-110 cursor-pointer",
         className,
       )}
       style={style}
+      onClick={() => setIsFlipped(!isFlipped)}
     >
-      <div className="relative w-full h-full rounded-xl shadow-lg transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+      <div 
+        className={cn(
+          "relative w-full h-full rounded-xl shadow-lg transition-all duration-700 [transform-style:preserve-3d]",
+          isFlipped ? "[transform:rotateY(180deg)]" : "group-hover:[transform:rotateY(180deg)]"
+        )}
+        style={{
+          WebkitTransformStyle: "preserve-3d",
+          transformStyle: "preserve-3d"
+        }}
+      >
         {/* Front side - Image */}
-        <div className="absolute inset-0 rounded-xl [backface-visibility:hidden]">
+        <div 
+          className="absolute inset-0 rounded-xl [backface-visibility:hidden]"
+          style={{
+            WebkitBackfaceVisibility: "hidden",
+            backfaceVisibility: "hidden"
+          }}
+        >
           <img
             src={image}
             alt={title}
@@ -123,11 +142,16 @@ function FlipCard({ image, title, className, style }: FlipCardProps) {
           />
         </div>
         {/* Back side - Title and Description */}
-        <div className="absolute inset-0 rounded-xl bg-background border-2 border-border flex flex-col items-center justify-center p-3 text-center [transform:rotateY(180deg)] [backface-visibility:hidden]">
+        <div 
+          className="absolute inset-0 rounded-xl bg-background border-2 border-border flex flex-col items-center justify-center p-3 text-center [transform:rotateY(180deg)] [backface-visibility:hidden]"
+          style={{
+            WebkitBackfaceVisibility: "hidden",
+            backfaceVisibility: "hidden"
+          }}
+        >
           <h3 className="font-bold text-xs md:text-sm text-foreground mb-1 text-balance">
             {title}
           </h3>
-
         </div>
       </div>
     </div>
@@ -171,46 +195,70 @@ export default function CircularGallery() {
   const centerY = size / 2;
 
   return (
-    <div
-      ref={galleryRef}
-      className="relative w-full max-w-[340px] sm:max-w-[500px] md:max-w-[650px] aspect-square flex items-center justify-center mx-auto"
-    >
-      {/* Central text */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center z-10 pointer-events-none p-8">
-        <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase mb-3">
-          Hover to Explore
+    <div className="w-full">
+      {/* Mobile view - Marquee scrollable gallery (hidden on desktop) */}
+      <div className="md:hidden w-full flex flex-col items-center gap-2">
+        <p className="font-mono text-[10px] tracking-widest text-muted-foreground/80 uppercase">
+          Tap Card to Flip
         </p>
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground text-center text-balance leading-tight">
-          Moments That{" "}
-          <span className="text-[#8cc2ff] italic">Inspire</span>
-        </h2>
-        <div className="mt-4 h-px w-16 bg-border mx-auto" />
-        <p className="mt-3 text-xs text-muted-foreground font-mono tracking-wider">
-          GALLERY
-        </p>
+
+        <div className="w-full overflow-hidden py-2">
+          <Marquee pauseOnHover duration="90s" className="[--gap:1.5rem]" repeat={3}>
+            {cardData.map((card, index) => (
+              <div key={index} className="w-44 h-60 shrink-0">
+                <FlipCard
+                  image={card.image}
+                  title={card.title}
+                  className="w-full h-full"
+                />
+              </div>
+            ))}
+          </Marquee>
+        </div>
       </div>
 
-      {/* Circular arrangement of cards */}
-      {size > 0 &&
-        cardData.map((card, index) => {
-          const angle =
-            (index / cardData.length) * 2 * Math.PI - Math.PI / 2 + rotation;
-          const x = centerX + radius * Math.cos(angle);
-          const y = centerY + radius * Math.sin(angle);
+      {/* Desktop view - Circular Gallery (hidden on mobile) */}
+      <div
+        ref={galleryRef}
+        className="hidden md:flex relative w-full max-w-[650px] aspect-square items-center justify-center mx-auto"
+      >
+        {/* Central text */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center z-10 pointer-events-none p-8">
+          <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase mb-3">
+            Hover to Explore
+          </p>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground text-center text-balance leading-tight">
+            Moments That{" "}
+            <span className="text-[#8cc2ff] italic">Inspire</span>
+          </h2>
+          <div className="mt-4 h-px w-16 bg-border mx-auto" />
+          <p className="mt-3 text-xs text-muted-foreground font-mono tracking-wider">
+            GALLERY
+          </p>
+        </div>
 
-          return (
-            <FlipCard
-              key={index}
-              {...card}
-              className="absolute hover:z-20"
-              style={{
-                left: `${x}px`,
-                top: `${y}px`,
-                transform: `translate(-50%, -50%) rotate(${(angle + Math.PI / 2) * (180 / Math.PI)}deg)`,
-              }}
-            />
-          );
-        })}
+        {/* Circular arrangement of cards */}
+        {size > 0 &&
+          cardData.map((card, index) => {
+            const angle =
+              (index / cardData.length) * 2 * Math.PI - Math.PI / 2 + rotation;
+            const x = centerX + radius * Math.cos(angle);
+            const y = centerY + radius * Math.sin(angle);
+
+            return (
+              <FlipCard
+                key={index}
+                {...card}
+                className="absolute hover:z-20"
+                style={{
+                  left: `${x}px`,
+                  top: `${y}px`,
+                  transform: `translate(-50%, -50%) rotate(${(angle + Math.PI / 2) * (180 / Math.PI)}deg)`,
+                }}
+              />
+            );
+          })}
+      </div>
     </div>
   );
 }
