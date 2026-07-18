@@ -155,7 +155,7 @@ export default function Contact() {
 
                     <input
                       type="text"
-                      placeholder="Siddharth"
+                      placeholder="Enter Your Name"
                       value={name}
                       onChange={(e) =>
                         setName(e.target.value)
@@ -176,7 +176,7 @@ export default function Contact() {
                   <span className="text-amber-400">$</span>
 
                   <TypingAnimation duration={26}>
-                    Awesome, now tell us how we can assist you today.
+                    Awesome, now tell us how can I assist you?
                   </TypingAnimation>
                 </div>
 
