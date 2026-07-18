@@ -9,7 +9,7 @@ export const siteConfig = {
     instagram: "https://www.instagram.com/i_am_dhrubojyoti_chakraborty/",
     linkedin: "https://www.linkedin.com/in/dhrubojyoti-chakraborty-567857257/",
     github: `https://github.com/${env.NEXT_PUBLIC_GITHUB_USERNAME}`,
-    email: "[EMAIL_ADDRESS]",
+    email: "dhrubojyotichakraborty69@gmail.com",
     whatsapp: "https://wa.me/919330857191"
 
 }

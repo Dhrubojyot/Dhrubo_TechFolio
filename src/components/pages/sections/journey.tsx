@@ -26,7 +26,7 @@ const education = [
     duration: "2025 – 2028",
     status: "ongoing" as const,
     description:
-      "Pursuing a comprehensive CS degree with focus on software engineering, algorithms, data structures, and modern web technologies.",
+      "Pursuing a B.Tech in Computer Science & Engineering, building expertise in Data Structures & Algorithms, Software Engineering, DBMS, Operating Systems, Computer Networks, Artificial Intelligence, and Full-Stack Web Development through academic coursework and hands-on projects.",
     tags: ["Full-time", "On-site"],
     logo: "/aot.png",
     logoFallback: "AOT",
@@ -39,7 +39,7 @@ const education = [
     duration: "2023 – 2025",
     status: "completed" as const,
     description:
-      "Completed 10+2 with Physics, Chemistry, and Mathematics. Developed an early interest in programming and systematic problem-solving.",
+      "Completed Diploma Engineering in Computer Science & Technology and Built a strong foundation in Data Structures & Algorithms (DSA), Computer Networks, DBMS, Operating Systems, Programming, and Web Technologies through practical coursework and projects.",
 
     tags: ["Graduated", "Merit"],
     logo: "/tpi.png",
@@ -53,9 +53,9 @@ const education = [
     duration: "2021 – 2022",
     status: "completed" as const,
     description:
-      "Completed secondary education with a focus on science and mathematics, laying the groundwork for future technical studies.",
+      "Completed 10+2 with Biological Science, Chemistry, Biology, Computer Science, and Nutrition, building a strong foundation in science and analytical thinking.",
 
-    tags: ["Graduated", "Distinction"],
+    tags: ["1st Division", "Completed", "Distinction"],
     logo: "/college/st-augustine-logo.png",
     logoFallback: "SADS",
   },
@@ -70,9 +70,9 @@ const experience = [
     duration: "2025 – Present",
     status: "ongoing" as const,
     description:
-      "Leading a college tech community focused on open-source, hackathons, and developer education. Organising workshops and mentoring junior developers.",
+      "Leading a global tech community focused on open-source, hackathons, and developer education. Organizing workshops, webinars, and community events while mentoring aspiring developers and fostering collaboration, innovation, and skill development.",
 
-    tags: ["Leadership", "Community Building"],
+    tags: ["Leadership", "Community Building", "Public Speaking", "Team Management"],
     logo: "/innovatex.png",
     logoFallback: "INX",
   },
@@ -86,7 +86,7 @@ const experience = [
     description:
       "Serving as Technical Associate for the Institution of Engineers (India) Student Chapter, managing technical operations and supporting student-led initiatives.",
 
-    tags: ["Full Stack", "Developer"],
+    tags: ["Full Stack", "Developer", "Event Coordination", "Technical Support"],
     logo: "/sccse.png",
     logoFallback: "< />",
   },
@@ -100,7 +100,7 @@ const experience = [
     description:
       "As a Miro Meetup Ambassador, I represent the Miro Community across the globe, leading initiatives that foster collaboration, innovation, and arrange events for the community.",
 
-    tags: ["Miro Community", "Ambassador"],
+    tags: ["Miro Community", "Ambassador", "Event Management"],
     logo: "/miro.webp",
     logoFallback: "Miro",
   },
@@ -114,8 +114,8 @@ const experience = [
     description:
       "Contributing to open-source repositories, raising pull requests, and collaborating with global developers on meaningful projects.",
 
-    tags: ["Open Source", "Mentorship"],
-    logo: "/company/github-logo.png",
+    tags: ["Open Source", "Mentorship", "Code Review", "Contributor"],
+    logo: "/mentor.webp",
     logoFallback: "GH",
   },
   {
@@ -126,7 +126,7 @@ const experience = [
     duration: "2025",
     status: "completed" as const,
     description:
-      "Contributing to open-source repositories, raising pull requests, and collaborating with global developers on meaningful projects.",
+      "Completed ISRO's AI/ML for Geodata Analysis training, gaining hands-on knowledge of Artificial Intelligence, Machine Learning, and geospatial data analysis using remote sensing datasets.",
 
     tags: ["AI/ML", "ISRO", "Geodata"],
     logo: "/isro.png",

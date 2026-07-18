@@ -366,7 +366,7 @@ const HomePage = () => {
             // setCurrentConsoleNavigation("portfolio")
           },
           resume: () => {
-            const resumeUrl = "/Dhrubojyoti Resume.pdf";
+            const resumeUrl = "Dhrubojyoti Resume.pdf";
             window.open(resumeUrl, "_blank");
           },
         };
